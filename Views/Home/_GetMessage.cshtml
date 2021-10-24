@@ -1,0 +1,11 @@
+﻿@model IEnumerable<string>
+@inject MobileStore.Services.ITimeService timer
+<h3>Список моделей</h3>
+<h3>Время: @timer.GetTime()</h3>
+<ul>
+    @foreach (string s in Model)
+    {
+        <li>@s</li>
+        
+    }
+</ul>
